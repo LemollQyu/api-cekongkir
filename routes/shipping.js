@@ -74,11 +74,9 @@ router.post("/select", (req, res) => {
   );
 
   if (!selected) {
-    return res
-      .status(404)
-      .json({
-        error: "Courier and service tidak ditemukan di data jasa kirim",
-      });
+    return res.status(404).json({
+      error: "Courier and service tidak ditemukan di data jasa kirim",
+    });
   }
 
   res.json({ selected });
